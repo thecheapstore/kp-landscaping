@@ -1,34 +1,206 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Navigation Styles */
+.nav-link {
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.nav-link:hover {
+  color: #059669;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 0;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.mobile-nav-link:hover {
+  color: #059669;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Button Styles */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #059669;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #047857;
+  transform: translateY(-2px);
+}
+
+.cta-button-large {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #059669;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button-large:hover {
+  background-color: #047857;
+  transform: translateY(-2px);
+}
+
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #059669;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta-primary:hover {
+  background-color: #f0fdf4;
+  transform: translateY(-2px);
+}
+
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Card Styles */
+.service-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.15);
+  transform: translateY(-4px);
+}
+
+.location-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.location-card:hover {
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.15);
+  transform: translateY(-4px);
+}
+
+.blog-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.15);
+  transform: translateY(-4px);
+}
+
+.value-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+}
+
+.trust-indicator {
+  transition: transform 0.3s ease;
+}
+
+.trust-indicator:hover {
+  transform: scale(1.05);
+}
+
+/* Section Styles */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.section-subheading {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page,
+.about-page,
+.services-page,
+.blog-page,
+.contact-page,
+.city-landing-page,
+.micro-location-page,
+.service-page {
+  animation: fadeIn 0.5s ease-out;
 }
