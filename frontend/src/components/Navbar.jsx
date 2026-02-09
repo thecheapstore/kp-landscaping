@@ -12,10 +12,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-emerald-700">
-              KP Landscaping
-            </div>
-          </Link>
+  <img
+    src="/logo.png"
+    alt="KP Landscaping"
+    className="h-10 w-auto"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
