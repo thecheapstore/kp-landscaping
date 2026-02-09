@@ -15,7 +15,7 @@ const Navbar = () => {
   <img
     src="/logo.png"
     alt="KP Landscaping"
-    className="h-23 w-auto object-contain"
+    className="h-20 w-auto object-contain"
   />
 </Link>
 
