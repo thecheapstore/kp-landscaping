@@ -11,11 +11,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center">
   <img
     src="/logo.png"
     alt="KP Landscaping"
-    className="h-10 w-auto"
+    className="h-20 w-auto object-contain"
   />
 </Link>
 
