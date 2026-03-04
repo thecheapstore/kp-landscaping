@@ -60,10 +60,6 @@ const Footer = () => {
                     <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
                     <span>{office.phone}</span>
                   </div>
-                  <div className="flex items-start space-x-2 text-sm">
-                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>{office.address}</span>
-                  </div>
                 </div>
               ))}
             </div>
@@ -72,7 +68,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-emerald-800 mt-8 pt-8 text-center text-emerald-100">
-          <p>&copy; {new Date().getFullYear()} KP Landscaping. All rights reserved. Licensed & Insured.</p>
+          <p>
+  &copy; {new Date().getFullYear()} KP Landscaping. Designed & Developed by{" "}
+  <a
+    href="https://calibreassociates.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-white"
+  >
+    Calibre Associates
+  </a>.
+</p>
         </div>
       </div>
     </footer>

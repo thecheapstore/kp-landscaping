@@ -12,7 +12,7 @@ const Rochester = () => {
     <CityLanding 
       cityName="Rochester" 
       cityData={cityData}
-      phoneNumber="(585) XXX-XXXX"
+      phoneNumber="(585) 560-1134"
     />
   );
 };

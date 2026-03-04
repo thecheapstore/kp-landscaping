@@ -14,15 +14,15 @@ const DynamicPage = () => {
   
   if (city === 'buffalo') {
     locations = buffaloLocations;
-    phoneNumber = '(716) XXX-XXXX';
+    phoneNumber = '(716) 466-9969';
     cityName = 'Buffalo';
   } else if (city === 'rochester') {
     locations = rochesterLocations;
-    phoneNumber = '(585) XXX-XXXX';
+    phoneNumber = '(585) 560-1134';
     cityName = 'Rochester';
   } else if (city === 'albany') {
     locations = albanyLocations;
-    phoneNumber = '(518) XXX-XXXX';
+    phoneNumber = '(518) 777-2662';
     cityName = 'Albany';
   }
   

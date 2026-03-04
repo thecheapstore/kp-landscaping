@@ -12,19 +12,40 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // This will be connected to backend later
-    alert('Thank you for your interest! We will contact you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      location: '',
-      service: '',
-      message: ''
-    });
-  };
+  const encode = (data) => {
+  return Object.keys(data)
+    .map(
+      (key) =>
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    )
+    .join("&");
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({
+      "form-name": "contact",
+      ...formData,
+    }),
+  })
+    .then(() => {
+      alert("Thank you for your interest! We will contact you soon.");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        service: "",
+        message: "",
+      });
+    })
+    .catch((error) => alert("Form submission failed"));
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -60,112 +81,122 @@ const Contact = () => {
               <p className="text-gray-600 mb-8">
                 Fill out the form below and we'll get back to you within 24 hours
               </p>
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  onSubmit={handleSubmit}
+  className="space-y-6"
+>
+  {/* Netlify hidden fields */}
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="hidden" name="bot-field" />
 
-              <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" method="POST">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    placeholder="John Doe"
-                  />
-                </div>
+  <div>
+    <label className="block text-sm font-semibold text-gray-700 mb-2">
+      Full Name *
+    </label>
+    <input
+      type="text"
+      name="name"
+      value={formData.name}
+      onChange={handleChange}
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      placeholder="John Doe"
+    />
+  </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                      placeholder="john@example.com"
-                    />
-                  </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label className="block text-sm font-semibold text-gray-700 mb-2">
+        Email *
+      </label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        placeholder="john@example.com"
+      />
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                </div>
+    <div>
+      <label className="block text-sm font-semibold text-gray-700 mb-2">
+        Phone *
+      </label>
+      <input
+        type="tel"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        placeholder="(555) 123-4567"
+      />
+    </div>
+  </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Service Area *
-                    </label>
-                    <select
-                      name="location"
-                      value={formData.location}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    >
-                      <option value="">Select Area</option>
-                      <option value="buffalo">Buffalo Area</option>
-                      <option value="rochester">Rochester Area</option>
-                      <option value="albany">Albany Area</option>
-                    </select>
-                  </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label className="block text-sm font-semibold text-gray-700 mb-2">
+        Service Area *
+      </label>
+      <select
+        name="location"
+        value={formData.location}
+        onChange={handleChange}
+        required
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      >
+        <option value="">Select Area</option>
+        <option value="buffalo">Buffalo Area</option>
+        <option value="rochester">Rochester Area</option>
+        <option value="albany">Albany Area</option>
+      </select>
+    </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Service Needed
-                    </label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    >
-                      <option value="">Select Service</option>
-                      <option value="lawn-mowing">Lawn Care</option>
-                      <option value="tree-service">Tree Service</option>
-                      <option value="landscaping">Landscaping/Fence/Deck/Patio</option>
-                      <option value="snow-plow">Snow Plowing</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
+    <div>
+      <label className="block text-sm font-semibold text-gray-700 mb-2">
+        Service Needed
+      </label>
+      <select
+        name="service"
+        value={formData.service}
+        onChange={handleChange}
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      >
+        <option value="">Select Service</option>
+        <option value="lawn-mowing">Lawn Care</option>
+        <option value="tree-service">Tree Service</option>
+        <option value="landscaping">Landscaping/Fence/Deck/Patio</option>
+        <option value="snow-plow">Snow Plowing</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="4"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
+  <div>
+    <label className="block text-sm font-semibold text-gray-700 mb-2">
+      Message
+    </label>
+    <textarea
+      name="message"
+      value={formData.message}
+      onChange={handleChange}
+      rows="4"
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+      placeholder="Tell us about your project..."
+    ></textarea>
+  </div>
 
-                <button type="submit" className="cta-button-large w-full">
-                  Submit Request
-                </button>
-              </form>
+  <button type="submit" className="cta-button-large w-full">
+    Submit Request
+  </button>
+</form>
             </div>
 
             {/* Contact Information */}
