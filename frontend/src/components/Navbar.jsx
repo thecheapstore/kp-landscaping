@@ -17,8 +17,6 @@ const Navbar = () => {
       className="h-12 w-auto"
     />
   </Link>
-</div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="nav-link">Home</Link>
