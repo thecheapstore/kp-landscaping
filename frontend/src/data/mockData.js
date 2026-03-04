@@ -3,18 +3,15 @@
 export const offices = [
   {
     city: "Buffalo",
-    phone: "(716) XXX-XXXX",
-    address: "123 Main Street, Buffalo, NY 14202"
+    phone: "(716) 466-9969"
   },
   {
     city: "Rochester",
-    phone: "(585) XXX-XXXX",
-    address: "456 Park Ave, Rochester, NY 14607"
+    phone: "(585) 560-1134"
   },
   {
     city: "Albany",
-    phone: "(518) XXX-XXXX",
-    address: "789 State St, Albany, NY 12203"
+    phone: "(518) 777-2662"
   }
 ];
 
@@ -27,30 +24,30 @@ export const services = [
     image: "https://images.unsplash.com/photo-1734303023491-db8037a21f09"
   },
   {
-    id: "fertilization",
-    name: "Fertilization",
-    shortDesc: "Expert fertilization programs for healthy, green lawns year-round",
+    id: "tree-removal",
+    name: "Tree Removal",
+    shortDesc: "Expert & safe tree removal from property",
     icon: "Sprout",
-    image: "https://images.pexels.com/photos/6728925/pexels-photo-6728925.jpeg"
+    image: "https://images.unsplash.com/photo-1765064519342-deae9d37579b"
   },
   {
     id: "weed-control",
     name: "Weed Control",
     shortDesc: "Comprehensive weed control solutions to protect your lawn",
     icon: "Bug",
-    image: "https://images.pexels.com/photos/6728925/pexels-photo-6728925.jpeg"
+    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01"
   },
   {
-    id: "aeration",
-    name: "Aeration",
-    shortDesc: "Core aeration services to improve soil health and grass growth",
+    id: "power-wash",
+    name: "Pressure Wash",
+    shortDesc: "Secure pressure washing for house, patio, retain walls & driveways",
     icon: "Wind",
-    image: "https://images.pexels.com/photos/6728925/pexels-photo-6728925.jpeg"
+    image: "https://images.unsplash.com/photo-1581883579507-019c44b711cb"
   },
   {
     id: "landscaping-installation",
     name: "Landscaping Installation",
-    shortDesc: "Custom landscape design and installation for beautiful outdoor spaces",
+    shortDesc: "Custom landscape design and installation with fences & decks for beautiful outdoor spaces",
     icon: "Flower2",
     image: "https://images.unsplash.com/photo-1597201278257-3687be27d954"
   },
@@ -59,7 +56,7 @@ export const services = [
     name: "Mulching",
     shortDesc: "Professional mulch installation to enhance garden beds and retain moisture",
     icon: "Mountain",
-    image: "https://images.unsplash.com/photo-1597201278257-3687be27d954"
+    image: "https://images.unsplash.com/photo-1628482283044-e5cc2f238de1"
   },
   {
     id: "tree-trimming",
@@ -73,28 +70,28 @@ export const services = [
     name: "Stump Grinding",
     shortDesc: "Complete stump removal and grinding services",
     icon: "CircleSlash",
-    image: "https://images.unsplash.com/photo-1754322449005-bdc38c631682"
+    image: "https://images.unsplash.com/photo-1754321895426-68b04ba453e3"
   },
   {
     id: "seasonal-cleanup",
     name: "Seasonal Cleanup",
     shortDesc: "Spring and fall cleanup services to prepare your property",
     icon: "CalendarDays",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01"
+    image: "https://images.unsplash.com/photo-1768797054341-e1c8fd3b17c0"
   },
   {
     id: "property-maintenance",
     name: "Property Maintenance",
     shortDesc: "Ongoing property maintenance for commercial and residential clients",
     icon: "Home",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01"
+    image: "https://images.unsplash.com/photo-1606478829566-423465411031"
   },
   {
     id: "yard-leveling",
     name: "Yard Leveling",
     shortDesc: "Professional grading and leveling services for even, usable yards",
     icon: "Ruler",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01"
+    image: "https://images.unsplash.com/photo-1630312118792-736cdba4ea47"
   }
 ];
 

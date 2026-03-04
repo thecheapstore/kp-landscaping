@@ -61,16 +61,6 @@ const Contact = () => {
                 Fill out the form below and we'll get back to you within 24 hours
               </p>
 
-              {/* GHL Form Placeholder */}
-              <div className="bg-emerald-50 border-2 border-dashed border-emerald-300 rounded-lg p-8 mb-8">
-                <p className="text-center text-emerald-700 font-semibold mb-2">
-                  GoHighLevel Form Integration Area
-                </p>
-                <p className="text-center text-sm text-gray-600">
-                  Embed your GHL form code here
-                </p>
-              </div>
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -149,10 +139,10 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     >
                       <option value="">Select Service</option>
-                      <option value="lawn-mowing">Lawn Mowing</option>
-                      <option value="fertilization">Fertilization</option>
-                      <option value="landscaping">Landscaping Installation</option>
-                      <option value="tree-trimming">Tree Trimming</option>
+                      <option value="lawn-mowing">Lawn Care</option>
+                      <option value="tree-service">Tree Service</option>
+                      <option value="landscaping">Landscaping/Fence/Deck/Patio</option>
+                      <option value="snow-plow">Snow Plowing</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -215,8 +205,8 @@ const Contact = () => {
                   <Clock className="w-5 h-5 text-emerald-600 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-900">Business Hours</p>
-                    <p className="text-gray-600">Monday - Friday: 7:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 8:00 AM - 4:00 PM</p>
+                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p className="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
                     <p className="text-gray-600">Sunday: Closed</p>
                   </div>
                 </div>
@@ -226,7 +216,7 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
                     <a href="mailto:info@kplandscaping.com" className="text-gray-600 hover:text-emerald-600">
-                      info@kplandscaping.com
+                      kplandscapingny@gmail.com
                     </a>
                   </div>
                 </div>
