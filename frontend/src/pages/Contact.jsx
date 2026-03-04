@@ -61,7 +61,7 @@ const Contact = () => {
                 Fill out the form below and we'll get back to you within 24 hours
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" method="POST">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Full Name *
@@ -188,13 +188,6 @@ const Contact = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <MapPin className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-gray-900">Address</p>
-                          <p className="text-gray-600">{office.address}</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -215,7 +208,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5 text-emerald-600 mt-1" />
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <a href="mailto:info@kplandscaping.com" className="text-gray-600 hover:text-emerald-600">
+                    <a href="mailto:kplandscapingny@gmail.com" className="text-gray-600 hover:text-emerald-600">
                       kplandscapingny@gmail.com
                     </a>
                   </div>
