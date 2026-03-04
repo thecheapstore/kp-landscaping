@@ -149,11 +149,18 @@ const CityLanding = ({ cityName, cityData, phoneNumber }) => {
           <div className="text-center mb-8">
             <h2 className="section-heading">Find Us in {cityName}</h2>
           </div>
-          <div className="bg-emerald-50 border-2 border-dashed border-emerald-300 rounded-lg p-12 text-center">
-            <MapPin className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-            <p className="text-emerald-700 font-semibold mb-2">Google Maps Integration Area</p>
-            <p className="text-gray-600">Embed your map here showing service area</p>
-          </div>
+         <div className="rounded-lg overflow-hidden shadow-lg">
+  <iframe
+    title="Service Area Map"
+    width="100%"
+    height="400"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    src={`https://www.google.com/maps?q=${cityName},New York&output=embed`}
+  ></iframe>
+</div>
         </div>
       </section>
 
