@@ -12,7 +12,7 @@ const Buffalo = () => {
     <CityLanding 
       cityName="Buffalo" 
       cityData={cityData}
-      phoneNumber="(716) 466-9969"
+      phoneNumber="(716) XXX-XXXX"
     />
   );
 };

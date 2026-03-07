@@ -14,7 +14,7 @@ const DynamicPage = () => {
   
   if (city === 'buffalo') {
     locations = buffaloLocations;
-    phoneNumber = '(716) 466-9969';
+    phoneNumber = '(716) XXX-XXXX';
     cityName = 'Buffalo';
   } else if (city === 'rochester') {
     locations = rochesterLocations;
