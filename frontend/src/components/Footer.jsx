@@ -71,12 +71,12 @@ const Footer = () => {
           <p>
   &copy; {new Date().getFullYear()} KP Landscaping. Designed & Developed by{" "}
   <a
-    href="#'
+    href="https://kplandscaping.us"
     target="_blank"
     rel="noopener noreferrer"
     className="underline hover:text-white"
   >
-    Travis
+    Calibre Associates
   </a>.
 </p>
         </div>
