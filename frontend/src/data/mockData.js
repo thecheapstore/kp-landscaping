@@ -3,7 +3,7 @@
 export const offices = [
   {
     city: "Buffalo",
-    phone: "(716) 466-9969"
+    phone: "(716) XXX-XXXX"
   },
   {
     city: "Rochester",

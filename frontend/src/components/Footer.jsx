@@ -76,7 +76,7 @@ const Footer = () => {
     rel="noopener noreferrer"
     className="underline hover:text-white"
   >
-    Calibre Associates
+    KP Landscaping
   </a>.
 </p>
         </div>
